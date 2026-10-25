@@ -1,0 +1,37 @@
+{
+  "name": "proofmatch-ai",
+  "private": true,
+  "version": "0.12.0-presentation-simulation",
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "test": "node --experimental-strip-types --test tests/*.test.ts",
+    "preflight": "node scripts/preflight.mjs",
+    "smoke": "node scripts/smoke.mjs",
+    "interactions": "node scripts/audit-interactions.mjs",
+    "browsercheck": "node scripts/browser-check.mjs",
+    "telegram:setup": "node scripts/setup-telegram.mjs",
+    "telegram:simulate": "node scripts/telegram-simulate.mjs && node --experimental-strip-types scripts/telegram-live-simulate.mjs",
+    "showcase:check": "node scripts/preflight.mjs && node scripts/audit-interactions.mjs && node --experimental-strip-types --test tests/*.test.ts && npm run telegram:simulate"
+  },
+  "dependencies": {
+    "next": "^15.5.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "lucide-react": "^0.468.0",
+    "qrcode": "^1.5.4"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "typescript": "^5.8.0",
+    "tailwindcss": "^3.4.17",
+    "postcss": "^8.4.49",
+    "autoprefixer": "^10.4.20",
+    "@types/qrcode": "^1.5.0"
+  }
+}
