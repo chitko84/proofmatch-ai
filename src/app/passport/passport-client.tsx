@@ -48,6 +48,6 @@ export default function PassportClient(){
     </form>}
    </>:<p role="alert">This invitation is unavailable. Please ask the recruiter for a new link.</p>}
     <p className="passport-small"><ShieldCheck size={15}/> This sample is not an official job application. No automatic hiring or rejection.</p>
-  </div><footer className="passport-foot"><Link href="/">About ProofMatch</Link> · Fictional demo</footer>
+  </div><footer className="passport-foot"><Link href="/">About ProofMatch</Link> · Illustrative profile</footer>
  </main>;
 }

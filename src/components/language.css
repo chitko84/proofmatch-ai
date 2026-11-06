@@ -1,0 +1,79 @@
+/* Accessible, compact global language picker */
+.pm-language { position:relative;z-index:130;flex-shrink:0; color:#173b38;font-family:inherit; }
+.pm-language-trigger {border:1px solid rgba(24,104,83,.23);border-radius:999px;min-height:35px;display:flex;gap:7px;align-items:center;justify-content:center;background:#f5fbf8;color:#175947;padding:7px 11px;font-size:12px;font-weight:800;cursor:pointer;transition:background .2s,border-color .2s;box-shadow:0 2px 8px rgba(18,63,52,.06)}
+.pm-language-trigger:hover,.pm-language-trigger:focus-visible{background:#e4f4eb;border-color:#168567;outline-offset:3px}
+.pm-language-trigger svg{flex-shrink:0}.pm-rotate{transform:rotate(180deg)}
+.pm-language-popover{position:absolute;right:0;top:calc(100% + 10px);width:min(310px,calc(100vw - 24px));max-height:calc(100dvh - 95px);overflow:auto;background:#fff;border:1px solid #d9e8df;border-radius:18px;padding:12px;box-shadow:0 22px 60px rgba(9,40,33,.22);color:#173b38;animation:pmLangIn .18s ease;isolation:isolate}
+@keyframes pmLangIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
+.pm-language-heading{display:flex;gap:11px;align-items:center;padding:8px 7px 12px;border-bottom:1px solid #e6eee8}
+.pm-language-heading>div:last-child{display:flex;flex-direction:column;gap:2px;min-width:0}.pm-language-heading strong{font-size:14px;font-weight:850}.pm-language-heading small{font-size:11px;color:#618077}
+.pm-language-icon{width:37px;height:37px;border-radius:12px;background:#e1f3eb;display:grid;place-items:center;color:#238464}
+.pm-language-options{display:grid;gap:3px;padding:9px 0}
+.pm-language-options button{width:100%;background:#fff;border:1px solid transparent;border-radius:11px;display:flex;align-items:center;justify-content:space-between;gap:8px;text-align:left;padding:9px 11px;color:#173b38;cursor:pointer;font-weight:780;font-size:13px;line-height:1.4}
+.pm-language-options button:hover,.pm-language-options button:focus-visible{border-color:#c0ddcb;background:#f3f8f4;outline-offset:1px}
+.pm-language-options button.pm-language-selected{background:#e7f4eb;color:#12694c;border-color:#a9d5bb}
+.pm-language-options button span{display:grid;gap:2px}.pm-language-options button small{color:#738a7b;font-size:10px;font-weight:500}
+.pm-language-footnote{margin:4px 5px 2px!important;border-top:1px solid #e5eee9;padding-top:10px;font-size:10px!important;line-height:1.6!important;color:#668077!important}
+.public-header .pm-language-trigger{background:#eaf8f1;color:#175947}.public-header .pm-language{margin-left:auto}
+.workspace-topbar .pm-language{margin-left:auto}.workspace-topbar .pm-language+.workspace-status{margin-left:0}
+@media(max-width:760px){.pm-language-popover{position:fixed;right:12px;top:68px;max-height:calc(100dvh - 83px);z-index:150}.public-header .pm-language{margin-left:auto}.workspace-topbar .pm-language{margin-left:auto}.workspace-topbar .pm-language+.workspace-status{display:none}.pm-language-trigger{padding:6px 9px;min-height:34px}}
+@media(prefers-reduced-motion:reduce){.pm-language-popover{animation:none}.pm-language-trigger{transition:none}}
+
+.pm-language-standalone{position:fixed;z-index:1000;right:18px;top:18px;filter:drop-shadow(0 5px 18px #112c251e)}
+@media(max-width:420px){.public-header .nav-demo{display:none}.public-header .pm-language{margin-left:auto}.pm-language-standalone{right:12px;top:12px}}
+
+.mobile-workspace-nav-link{display:none}
+@media(max-width:720px){.mobile-workspace-nav-link{display:block}}
+
+/* Locale-aware typography: retain readable Tamil glyph shapes and CJK line wrapping. */
+html[lang="ta"] body{font-family:"Noto Sans Tamil UI","Nirmala UI","Latha",system-ui,sans-serif;line-height:1.6}
+html[lang="zh-Hans"] body{font-family:"Noto Sans CJK SC","Noto Sans SC","Microsoft YaHei","PingFang SC",system-ui,sans-serif;line-height:1.5}
+html[lang="ms"] body{line-height:1.55}
+html[lang="ta"] :is(button,label,select,.workspace-nav-link,.nw-job-card,.ci-panel,.ci-style-card),
+html[lang="zh-Hans"] :is(button,label,select,.workspace-nav-link,.nw-job-card,.ci-panel,.ci-style-card){line-height:1.5;overflow-wrap:anywhere}
+html[lang="ta"] :is(h1,h2,h3,.nw-hero p,.ci-role-card p){line-height:1.45}
+html[lang="zh-Hans"] :is(h1,h2,h3,.nw-hero p,.ci-role-card p){line-height:1.35}
+.pm-language-options button{min-height:49px}
+.pm-language-options button small{line-height:1.4}
+@media(max-width:760px){.pm-language-heading,.pm-language-options button{overflow-wrap:anywhere}}
+
+/* Burmese / Myanmar: legible shaping and flexible wrapping in dense application navigation. */
+html[lang="my"] body{font-family:"Noto Sans Myanmar","Myanmar Text","Pyidaungsu","Padauk",system-ui,sans-serif;line-height:1.65}
+html[lang="my"] :is(button,label,select,.workspace-nav-link,.workspace-breadcrumb,.pm-language-options button){line-height:1.6;overflow-wrap:anywhere}
+html[lang="my"] :is(h1,h2,h3,.hero-copy h1){line-height:1.5}
+
+html[lang="my"] .workspace-nav-link{height:auto;min-height:43px;padding-top:8px;padding-bottom:8px;font-size:12px}
+html[lang="my"] .workspace-role-switch button{height:auto;min-height:36px}
+
+/* Myanmar homepage: deliberate Unicode shaping and a balanced two-column composition.
+   Avoid the Latin display font's tight tracking and forced oversized line breaks. */
+html[lang="my"] .public-nav{gap:clamp(11px,1.5vw,22px);height:75px}
+html[lang="my"] .public-links a{white-space:nowrap;font-size:12px;line-height:1.8}
+html[lang="my"] .public-role-link{font-size:11px;white-space:nowrap;line-height:1.55}
+html[lang="my"] .nav-demo{white-space:nowrap;min-width:max-content}
+html[lang="my"] .landing-hero{grid-template-columns:minmax(0,1.02fr) minmax(0,.98fr);gap:clamp(19px,2.6vw,43px);padding-top:52px;min-height:610px}
+html[lang="my"] .landing-hero>.hero-copy{min-width:0;padding-bottom:8px}
+html[lang="my"] .hero-copy h1{font-family:"Myanmar Text","Noto Sans Myanmar","Pyidaungsu",sans-serif;font-size:clamp(32px,3.35vw,51px);font-weight:800;letter-spacing:0;line-height:1.42;max-width:100%;word-break:normal;overflow-wrap:normal;text-wrap:balance;margin-bottom:21px}
+html[lang="my"] .hero-copy h1 span{letter-spacing:0}
+html[lang="my"] .hero-copy p{font-size:clamp(14px,1.05vw,16px);line-height:1.95;max-width:560px;color:#49656b;margin-bottom:24px;word-break:normal;overflow-wrap:normal}
+html[lang="my"] .eyebrow-pill{width:fit-content;max-width:100%;font-size:11px;line-height:1.65;margin-bottom:21px;padding:8px 12px}
+html[lang="my"] .hero-cta-row{gap:10px}
+html[lang="my"] .hero-cta-row .button,html[lang="my"] .hero-role-entry-link{font-size:12px;line-height:1.75;white-space:normal;min-height:43px;padding:10px 13px;word-break:normal}
+html[lang="my"] .hero-role-entry{gap:9px;margin-top:15px}
+html[lang="my"] .hero-hint{font-size:11px;line-height:1.8;gap:8px;max-width:100%}
+html[lang="my"] .subtle-link{font-size:12px;line-height:1.65;max-width:100%}
+html[lang="my"] .landing-hero .talent-orbit{min-width:0}
+/* At the width from the reported screenshot, use the existing accessible menu
+   instead of crushing several long Burmese labels into narrow columns. */
+@media(max-width:1450px){
+ html[lang="my"] .public-nav{gap:14px}
+ html[lang="my"] .public-links{display:none;position:absolute;top:75px;left:0;right:0;background:#fff;border-bottom:1px solid #d9e8df;padding:18px clamp(20px,6vw,96px);box-shadow:0 19px 40px #12382c16;margin-left:0}
+ html[lang="my"] .public-links.public-links-open{display:flex;flex-wrap:wrap;align-items:center;gap:18px 25px;z-index:60}
+ html[lang="my"] .mobile-menu{display:grid;place-items:center;padding:8px;margin-left:4px}
+ html[lang="my"] .public-role-links{display:flex;margin-left:auto;gap:5px}
+ html[lang="my"] .pm-language{margin-left:0!important}
+}
+@media(max-width:1200px){html[lang="my"] .public-role-links{display:none}html[lang="my"] .public-nav .pm-language{margin-left:auto!important}}
+@media(max-width:990px){html[lang="my"] .landing-hero{grid-template-columns:minmax(0,1fr);gap:24px;min-height:0;padding-top:40px}html[lang="my"] .hero-copy h1{font-size:clamp(31px,5vw,48px);max-width:790px}html[lang="my"] .hero-copy p{font-size:15px;max-width:740px}html[lang="my"] .public-links.public-links-open{flex-direction:column;align-items:flex-start;gap:16px}}
+@media(max-width:720px){html[lang="my"] .public-links{top:70px}html[lang="my"] .public-nav{height:70px}html[lang="my"] .hero-copy h1{font-size:clamp(29px,6.9vw,40px);line-height:1.52}html[lang="my"] .hero-copy p{font-size:14px;line-height:1.85}html[lang="my"] .hero-cta-row .button{flex:1 1 180px}}
+@media(max-width:420px){html[lang="my"] .hero-copy h1{font-size:clamp(29px,7.4vw,34px)}html[lang="my"] .hero-role-entry-link{flex:1 1 100%}html[lang="my"] .hero-cta-row .button{width:100%}html[lang="my"] .eyebrow-pill{font-size:10px}}

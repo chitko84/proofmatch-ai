@@ -1,0 +1,10 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {compareExpectations,salaryRange} from '../src/lib/expectations-decision.ts';
+import {OPPORTUNITIES} from '../src/lib/career-catalog.ts';
+const job=OPPORTUNITIES.find(x=>x.id==='job-scriptwriter-6')!;
+const base={role:'Scriptwriter',location:'Kuala Lumpur',mode:'Hybrid',salaryMin:'4200',salaryMax:'6500',strengths:'I did scriptwriting and storytelling, editing and character development in short films.',flexibility:''};
+test('full sample has positive recommendation with grounded reasons',()=>{const result=compareExpectations(base,job);assert.equal(result.level,'consider');assert.equal(result.matchedSkills.length,4);assert.match(result.headline,/YES/)});
+test('does not recommend applying solely because salary and location align',()=>{const result=compareExpectations({...base,strengths:'I have no relevant film or media work examples at present.'},job);assert.equal(result.level,'explore');assert.match(result.headline,/NOT YET/)});
+test('unknown compensation remains unknown, not mismatched',()=>{assert.equal(salaryRange('Competitive'),null);const result=compareExpectations(base,{...job,salary:'Competitive'});assert.equal(result.signals[0].ok,null)});
+test('remote jobs do not require candidate to live in the posting city',()=>{const result=compareExpectations({...base,mode:'Remote',location:'Penang'},{...job,mode:'Remote'});assert.equal(result.signals[2].ok,null)});

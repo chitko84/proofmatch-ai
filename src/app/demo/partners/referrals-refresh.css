@@ -1,0 +1,9 @@
+.pm-referral-summary{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:19px}
+.pm-employer-switch{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(220px,.9fr);gap:24px;align-items:center;margin-bottom:21px}
+.pm-employer-switch .pm-field{width:100%}
+.pm-referral-connection{display:flex;gap:11px;padding:14px 16px;background:#fff8ed;border:1px solid #eddeb9;border-radius:13px;color:#735426}
+.pm-referral-connection.active{background:#eef9f2;color:#135c4c;border-color:#b9e2d1}
+.pm-referral-connection>svg{flex-shrink:0;margin-top:3px}.pm-referral-connection strong,.pm-referral-connection small{display:block}.pm-referral-connection small{font-size:12px;margin-top:4px;line-height:1.55}
+.pm-referral-message{background:#f7fbf9;border:1px solid #dceae3;padding:12px;border-radius:15px;overflow-wrap:anywhere}.pm-referral-message p{white-space:pre-wrap;font-size:13px;line-height:1.65;color:#385c55}
+.pm-referral-steps{border-top:1px solid #e3eee7;padding-top:16px;line-height:1.6;font-size:13px}.pm-referral-steps a{display:inline-flex;gap:5px;align-items:center;color:#087b69;font-weight:700}
+@media(max-width:850px){.pm-referral-summary{grid-template-columns:repeat(2,minmax(0,1fr))}.pm-employer-switch{grid-template-columns:1fr}}

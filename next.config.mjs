@@ -18,6 +18,12 @@ const nextConfig = {
         source: '/api/:path*',
         headers: [{ key: 'Cache-Control', value: 'no-store' }],
       },
+      {
+        // Tiny local comic covers should be reusable across page visits.
+        // The embedded third-party flipbook itself is never cached here.
+        source: '/comics/:path*',
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=86400, stale-while-revalidate=86400' }],
+      },
     ];
   },
 };

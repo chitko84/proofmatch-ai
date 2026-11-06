@@ -1,4 +1,2 @@
-import Link from 'next/link';
-import { ArrowUpRight, BriefcaseBusiness, MapPin } from 'lucide-react';
-import { roles } from '@/lib/data';
-export default function Roles(){return <div className="workspace-page"><div className="page-title-row"><div><span className="small-eyebrow">WHAT THE COMPANY NEEDS</span><h1>Job roles</h1><p>Explore the requirements and work arrangements of three fictional vacancies.</p></div><span className="data-count"><BriefcaseBusiness size={17}/>{roles.length} sample roles</span></div><div className="role-card-grid">{roles.map((r,i)=><Link href={`/demo/roles/${r.id}`} key={r.id} className={`job-card job-card-${i}`}><div className="job-top"><div className="job-icon"><BriefcaseBusiness size={24}/></div><ArrowUpRight size={20}/></div><span className="small-eyebrow">SAMPLE JOB 0{i+1}</span><h2>{r.title}</h2><p><MapPin size={15}/>{r.location} · {r.acceptedModes.join(' / ')}</p><div className="job-requirements">{r.requirements.map(x=><span key={x.skillId}>{x.label}</span>)}</div><div className="job-footer">View role details <ArrowUpRight size={17}/></div></Link>)}</div><p className="page-footnote">Requirements and weights are illustrative and should be reviewed by a qualified hiring manager before real use.</p></div>}
+import {redirect} from 'next/navigation';
+export default function Page(){redirect('/demo/discover')}

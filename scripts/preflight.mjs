@@ -27,6 +27,9 @@ check(exists('src/app/demo/connect/page.tsx') && exists('src/app/passport/page.t
 check(exists('src/app/demo/interview/page.tsx'), 'Interview Companion page exists');
 check(exists('src/app/demo/insights/page.tsx') && exists('src/lib/analytics.ts'), 'Data-derived recruiter analytics exists');
 check(exists('src/components/talent-orbit.tsx'), 'Interactive evidence-backed 3D-style hero exists');
+check(exists('src/app/demo/candidate/page.tsx') && exists('src/app/demo/news/page.tsx') && exists('src/app/demo/resume-clinic/page.tsx'), 'Candidate career space, news and résumé clinic routes exist');
+check(exists('src/app/demo/network/articles/page.tsx') && exists('src/app/demo/network/articles/[id]/page.tsx'), 'Career Stories publishing and article reading routes exist');
+check(exists('src/app/api/career-news/route.ts') && exists('src/lib/career-news.ts'), 'Source-linked live career-news API is included');
 check(exists('src/app/api/connect/telegram/route.ts'), 'Opt-in Telegram webhook route exists');
 check(exists('CONNECT_SETUP.md'), 'New feature setup and demo limits are documented');
 // This source-only static inspection uses the globally available TypeScript compiler if installed.

@@ -1,8 +1,9 @@
+@import '../components/language.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 :root{--ocean:#102c38;--jade:#137b6c;--jade-dark:#0e655b;--pearl:#f7f8f5;--mint:#e1f2e9;--muted:#66777d;--border:#e6eae7;--gold:#c99b59;--white:#fff;--shadow:0 14px 38px rgba(19,51,56,.065)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--pearl);color:var(--ocean);font-family:Inter,"Segoe UI",Arial,sans-serif;-webkit-font-smoothing:antialiased}button,input,select{font:inherit}button{cursor:pointer}button:disabled{cursor:not-allowed;opacity:.6}a{color:inherit;text-decoration:none}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #4cb6a7;outline-offset:3px}h1,h2,h3,p{margin-top:0}h1,h2,h3{letter-spacing:-.045em}h1{font-weight:780}::selection{background:#a8e8d8;color:#12313b}
+*{box-sizing:border-box}html{scroll-behavior:auto}body{margin:0;background:var(--pearl);color:var(--ocean);font-family:Inter,"Segoe UI",Arial,sans-serif;-webkit-font-smoothing:antialiased}button,input,select{font:inherit}button{cursor:pointer}button:disabled{cursor:not-allowed;opacity:.6}a{color:inherit;text-decoration:none}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #4cb6a7;outline-offset:3px}h1,h2,h3,p{margin-top:0}h1,h2,h3{letter-spacing:-.045em}h1{font-weight:780}::selection{background:#a8e8d8;color:#12313b}
 .content-width{width:min(1320px,calc(100% - 96px));margin-inline:auto}.button{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:12px 19px;font-weight:720;font-size:14px;line-height:1.15;border:0;border-radius:999px;white-space:nowrap;transition:transform .18s,background .18s,box-shadow .18s}.button:hover{transform:translateY(-2px)}.button-jade{background:var(--jade);color:#fff;box-shadow:0 6px 18px rgba(16,107,90,.13)}.button-jade:hover{background:var(--jade-dark)}.button-soft{background:#edf0eb;color:var(--ocean)}.button-white{background:#fff;color:var(--ocean)}.button-large{padding:16px 24px;font-size:15px}.section-eyebrow,.small-eyebrow{font-size:11px;letter-spacing:.12em;font-weight:800;color:#33857a;display:block}.section-eyebrow{margin-bottom:18px}.section-eyebrow.center{text-align:center}.text-link,.subtle-link{display:inline-flex;align-items:center;gap:8px;color:var(--jade);font-weight:730;font-size:14px}.text-link:hover,.subtle-link:hover{text-decoration:underline}
 /* Public navigation */
 .landing{background:#fff}.public-header{position:sticky;top:0;z-index:40;border-bottom:1px solid rgba(17,46,54,.06);background:rgba(255,255,255,.93);backdrop-filter:blur(20px)}.public-nav{height:84px;display:flex;align-items:center;gap:38px}.brand-lockup{display:inline-flex;align-items:center;gap:10px;white-space:nowrap}.brand-symbol{width:42px;height:42px;border-radius:14px;display:grid;place-items:center;background:var(--jade);color:white;transform:rotate(-6deg)}.brand-symbol svg{transform:rotate(6deg)}.brand-type{font-size:22px;font-weight:850;letter-spacing:-.07em;color:var(--ocean)}.brand-ai{color:var(--jade)}.brand-inverse .brand-type{color:white}.brand-inverse .brand-ai{color:#86d9bd}.public-links{display:flex;align-items:center;gap:32px;margin-left:auto}.public-links a{font-size:14px;font-weight:680;color:#30434b}.public-links a:hover{color:var(--jade)}.nav-demo{margin-left:6px}.mobile-menu,.sidebar-close{display:none;background:transparent;border:0;color:var(--ocean)}
@@ -302,3 +303,69 @@
 @media(prefers-reduced-motion:reduce){.practice-pulse{animation:none!important}}
 .practice-story-row{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap;padding-bottom:11px;border-bottom:1px solid #dcebe3;margin-bottom:11px}.practice-story-row>div{display:grid;gap:4px}.practice-story-row strong{font-size:12px;color:#244c3d}.practice-story-row small{font-size:10px;color:#769084}.practice-story-row .button{font-size:11px;padding:10px 12px}.practice-story-row .button:disabled{opacity:.48}
 .mira-voice-notice{font-size:11px;color:#f4dba0;text-align:center;margin:7px 18px 0;position:relative;z-index:4}
+
+/* Career connections on workspace overview */
+.overview-network-panel{margin:20px 0 24px;background:#fff;border:1px solid #e3ece6;border-radius:22px;padding:25px;box-shadow:0 8px 28px #0b40310b}.overview-network-header{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:20px}.overview-network-header h2{font-size:23px;letter-spacing:-.04em;margin:8px 0}.overview-network-header p{font-size:12px;color:#80938a;max-width:560px}.overview-network-header>span{font-size:11px;color:#629783;white-space:nowrap}.overview-network-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}.overview-network-grid>a{padding:20px 18px;border:1px solid #e4ede6;border-radius:16px;display:grid;gap:10px;background:linear-gradient(140deg,#f8fcf9,#fff);position:relative;transition:transform .16s,box-shadow .16s}.overview-network-grid>a:hover{transform:translateY(-2px);box-shadow:0 9px 25px #145c4022}.overview-network-grid>a>span{width:43px;height:43px;border-radius:13px;color:#18886e;background:#e3f5eb;display:grid;place-items:center}.overview-network-grid strong{font-size:14px;color:#254c43}.overview-network-grid small{font-size:11px;color:#7f988c;line-height:1.5;max-width:230px}.overview-network-grid>a>svg{position:absolute;right:16px;top:22px;color:#64a18a}@media(max-width:790px){.overview-network-header{flex-direction:column;align-items:flex-start}.overview-network-grid{grid-template-columns:1fr}}
+/* Expanded career directory retains the original evidence-matching models above. */
+.role-catalog-industries{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.role-catalog-industries>details{border:1px solid #e1ebe3;border-radius:12px;overflow:hidden}.role-catalog-industries summary{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:14px 16px;cursor:pointer;font-weight:750;font-size:12px;color:#2c6351;background:#f7faf7;list-style:none}.role-catalog-industries summary span{font-size:10px;color:#86a093}.role-catalog-links{display:grid;gap:7px;padding:12px}.role-catalog-links>a{display:grid;grid-template-columns:1fr auto;gap:5px;align-items:center;border:1px solid #e7efe8;border-radius:8px;padding:9px 11px;text-decoration:none;color:#2a6b53}.role-catalog-links>a strong{font-size:11px}.role-catalog-links>a small{grid-column:1;font-size:10px;color:#8b9d90}.role-catalog-links>a svg{grid-column:2;grid-row:1/3}@media(max-width:760px){.role-catalog-industries{grid-template-columns:1fr}}
+
+/* Role-aware navigation and entry points */
+.workspace-topbar{gap:14px}.workspace-breadcrumb{min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-right:auto}
+.workspace-role-switch{display:inline-flex;gap:4px;border-radius:15px;background:#edf4f1;border:1px solid #d9e8e0;padding:5px;flex-shrink:0}
+.workspace-role-switch button{border:0;background:transparent;color:#56736d;padding:9px 13px;display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:800;border-radius:11px;cursor:pointer;transition:background .18s,color .18s,box-shadow .18s}
+.workspace-role-switch button.active,.workspace-role-switch button[aria-pressed="true"]{background:#fff;box-shadow:0 2px 10px #0d3e3213;color:#12695b}
+.workspace-role-switch button:hover:not(.active){background:#e1ede7;color:#195e50}
+.workspace-role-switch button:focus-visible,.hero-role-entry-link:focus-visible,.public-role-link:focus-visible{outline:3px solid #1b9c85;outline-offset:3px}
+.public-role-links{display:flex;gap:8px;align-items:center;margin-left:auto}.public-role-link{display:inline-flex;align-items:center;gap:7px;color:#30534f;border:1px solid #dcebe5;border-radius:999px;padding:9px 12px;font-size:12px;font-weight:800;white-space:nowrap}.public-role-link:hover{background:#e6f5ef;color:#146b57}
+.hero-role-entry{display:flex;gap:11px;flex-wrap:wrap;margin-top:22px}.hero-role-entry-link{display:inline-flex;align-items:center;justify-content:center;gap:11px;padding:13px 18px;border:1px solid #d8e9e2;background:white;color:#15564d;border-radius:13px;font-weight:790;font-size:13px;box-shadow:0 5px 18px #0b3f3010}.hero-role-entry-link svg:last-child{opacity:.65}.hero-role-entry-link:hover{border-color:#209b7a;box-shadow:0 8px 24px #0b3f3020;transform:translateY(-1px)}.hero-role-entry-link.recruiter{background:#eaf5f0}
+@media(max-width:1400px){.workspace-status{display:none}}
+@media(max-width:1130px){.public-role-links{display:none}.workspace-breadcrumb{display:none}.workspace-role-switch{margin-left:auto}.workspace-topbar{justify-content:flex-end}}
+@media(max-width:720px){.workspace-topbar{gap:7px}.workspace-role-switch{padding:3px;gap:2px}.workspace-role-switch button{padding:8px 10px;font-size:11px}.workspace-role-switch button svg{width:15px;height:15px}.hero-role-entry-link{flex:1 1 150px}.workspace-hamburger{margin-right:auto}}
+@media(max-width:420px){.workspace-role-switch button{gap:4px;font-size:10px;padding:7px 7px}.workspace-role-switch{margin-left:0}.pm-language-compact{max-width:100px}}
+
+.hero-copy h1{overflow-wrap:anywhere}.hero-copy[data-no-translate] p{overflow-wrap:break-word}
+:lang(ta) .hero-copy h1{font-size:clamp(41px,5.3vw,72px);line-height:1.16}
+@media(max-width:720px){:lang(ta) .hero-copy h1{font-size:clamp(36px,8vw,55px)}}
+
+/* Fast navigation for live presentations: no blocking loaders or long page crossfades. */
+.workspace-route-progress{position:fixed;top:0;right:0;left:0;height:3px;z-index:9900;pointer-events:none;background:transparent;overflow:hidden}
+.workspace-route-progress>span{display:block;width:35%;height:100%;background:linear-gradient(90deg,#209d81,#8df5ce);animation:pm-route-fast .65s ease-out infinite;box-shadow:0 0 10px #50dab580}
+@keyframes pm-route-fast{0%{transform:translateX(-100%)}100%{transform:translateX(390%)}}
+.workspace-nav-link{transition-duration:.11s!important}
+/* Render long, scrollable lists only when they enter view; keep actual data and controls intact. */
+.tl-candidate,.nw-job-card,.nw-company-card{content-visibility:auto;contain-intrinsic-size:auto 270px}
+/* The opening still has branding, but it is no longer allowed to hold the page for seconds. */
+.landing-door-left,.landing-door-right{transition-duration:.53s!important}
+.landing-door-intro.is-opening .landing-door-light{animation-duration:.7s!important}
+.landing-door-intro.is-opening .landing-door-message{animation-duration:.35s!important}
+@media(prefers-reduced-motion:reduce){.workspace-route-progress>span{animation:none}}
+
+/* Competition demo responsiveness: keep interactions immediate across ALL workspace modules.
+   Only transitions are shortened; state, menus, forms and page behavior are unchanged. */
+.workspace-shell button,.workspace-shell a,.workspace-shell input,.workspace-shell select,.workspace-shell textarea{touch-action:manipulation}
+.workspace-shell button,.workspace-shell a{transition-duration:.12s}
+.workspace-content :is(.tl-candidate,.nw-company-card,.nw-job-card,.overview-network-grid>a){transition-duration:.12s!important}
+@media(max-width:760px){.workspace-content :is(.tl-candidate,.nw-company-card,.nw-job-card){box-shadow:none}}
+@media(prefers-reduced-motion:reduce){.workspace-shell button,.workspace-shell a{transition-duration:0ms!important}}
+
+/* Judge-ready interaction latency: do not impose long scroll animations on workspace navigation.
+   These rules apply to the entire workspace, without changing the feature layout. */
+.workspace-shell,.workspace-content,.workspace-main{scroll-behavior:auto}
+.workspace-nav-link,.workspace-role-switch button,.workspace-toolbar button,.workspace-topbar button{transition-duration:.105s!important}
+.workspace-nav-link:active,.workspace-topbar button:active{transition-duration:0s!important}
+@media(prefers-reduced-motion:reduce){.workspace-shell *, .workspace-shell *::before,.workspace-shell *::after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
+
+/* Quiet role-specific navigation: optional tools are hidden until requested. */
+.nav-more-section{margin-top:10px;border-top:1px solid #eaf0ec;padding-top:11px}
+.nav-more-toggle{width:100%;display:flex;align-items:center;gap:12px;padding:12px 13px;min-height:44px;border:0;border-radius:10px;background:transparent;color:#587970;font:inherit;font-size:12px;font-weight:760;cursor:pointer;text-align:left}
+.nav-more-toggle:hover,.nav-more-toggle:focus-visible{background:#f3f8f5;color:#176c57;outline-offset:2px}
+.nav-more-toggle>span{flex:1}.nav-more-chevron{transition:transform .12s}.nav-more-chevron.expanded{transform:rotate(90deg)}
+.nav-extra-items{margin-top:5px;padding-left:7px;border-left:2px solid #e5efe9}
+.nav-extra-items .workspace-nav-link{height:auto;min-height:40px;font-size:12px;padding:8px 12px}
+
+/* Real-world photography replaces the interactive 3D homepage hero. */
+.landing-photo-hero{position:relative;min-width:0;min-height:410px;overflow:hidden;border-radius:32px;box-shadow:0 26px 60px rgba(12,48,44,.18);background:#d9e8e2}
+.landing-photo-hero img{width:100%;height:100%;min-height:410px;object-fit:cover;display:block}
+.landing-photo-caption{position:absolute;bottom:0;left:0;right:0;padding:36px 30px 26px;color:white;background:linear-gradient(transparent,rgba(8,30,29,.83));display:grid;gap:7px}
+.landing-photo-caption span{font-size:12px;letter-spacing:.09em;text-transform:uppercase}.landing-photo-caption strong{font-size:clamp(21px,2.7vw,34px)}
+@media(max-width:900px){.landing-photo-hero,.landing-photo-hero img{min-height:290px}}

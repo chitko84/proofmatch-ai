@@ -26,7 +26,9 @@ export function DoorPortalLink({ children, className = '' }: { children: ReactNo
       return;
     }
     setOpening(true);
-    timer.current = setTimeout(() => router.push('/demo'), 1060);
+    // Start navigation immediately; the visual transition must never delay the app.
+    router.push('/demo');
+    timer.current = setTimeout(() => setOpening(false), 380);
   }
   function skip() {
     if (timer.current) clearTimeout(timer.current);

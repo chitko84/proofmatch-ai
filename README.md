@@ -1,3 +1,26 @@
+
+## Candidate Application Studio (latest update)
+
+Candidate View now includes three integrated preparation experiences:
+
+- **AI Job Hunt Copilot** — `/demo/job-hunt`: upload or paste a résumé, choose preferences and inspect evidence-backed matches against the platform’s job catalog; save opportunities locally.
+- **AI Résumé Tailor** — `/demo/resume-tailor`: create an editable, ATS-readable résumé for a chosen vacancy and export DOCX, TXT or Print / Save PDF.
+- **Cover Letter Generator** — `/demo/cover-letter`: generate a source-grounded letter in three tones, edit it and export documents.
+
+Use **Fill with sample data** to begin immediately. Résumé Clinic can send a CV into these tools, and the candidate application form can reuse a prepared letter for the same selected vacancy. Drafts and document revisions persist in browser localStorage; there is no database. See `JOB_HUNT_STUDIO_RELEASE.md` for full verification details and limitations.
+
+> **Latest workspace expansion:** See [TALENT_COMPANY_NETWORK_RELEASE.md](TALENT_COMPANY_NETWORK_RELEASE.md) for the cross-industry talent directory, trusted employer connections, CV intake, candidate comparison, and sample-fill workflows.
+
+# ProofMatch AI — Career Experience & Professional Network
+
+**Latest additions:** AI Mock Interview meeting room with screen sharing and slide presentations; 85 career interview paths and custom professions; 38 illustrative company profiles and 170 role listings; saved applications and recruiter desk; Messenger-style conversations; and ShareSpace social feed with 64 populated posts. The original evidence matching and recruiter tools are preserved.
+
+**Start here:** `npm ci && npm run dev`, then open `/demo` → **AI Mock Interview**, **Find jobs & companies**, **Messages** or **ShareSpace**. See [RELEASE_NOTES_MEETING_NETWORK.md](RELEASE_NOTES_MEETING_NETWORK.md) for the complete feature and verification notes.
+
+**Data and deployment:** Seeded company, people, job, chat and post records are illustrative. New community content, applications and conversations currently persist in the local browser and are **not sent** to external employers or contacts. Browser screen share is a local preview; AI uses submitted textual slide context, not screen pixels. The code is not a production-grade multi-user app until authentication, database storage, employer verification and delivery integrations are added.
+
+---
+
 <div align="center">
 
 # ProofMatch AI
@@ -239,3 +262,11 @@ ProofMatch is an **educational, hackathon-stage prototype**, not a production ap
 *AI Future Makers 2026 · Challenge 02 — Better Talent Matching*
 
 </div>
+
+## Career Experience — AI Mock Interview (Module 1)
+
+The new candidate-facing, interactive interview practice module is available at `/demo/career/interview`, linked from **Career Experience** in the sidebar and the overview page. It includes role-based questions, an interview room with voice/text input, optional camera self-preview, Gemini-powered adaptive feedback when configured, full offline guidance fallback, saved session history and exportable reports. The original recruiter Interview Companion is preserved at `/demo/interview`. See [`CAREER_EXPERIENCE_MODULE_1.md`](./CAREER_EXPERIENCE_MODULE_1.md) for details, limitations, and setup.
+
+## Insights Studio (CSV charts + résumé PDF)
+
+Open **Insights Studio** in the workspace at `/demo/studio` to upload CSV data and create seven types of charts, or upload PDF résumés and explore document-based skill/role alignment. See [INSIGHTS_STUDIO_RELEASE.md](INSIGHTS_STUDIO_RELEASE.md) for capabilities, privacy boundaries, configuration and checks.

@@ -14,7 +14,7 @@ test('public landing page mounts the automatic entrance, not an entry CTA wrappe
 test('automatic entrance supports skip, replay, and reduced motion', () => {
   const intro = read('../src/components/landing-door-intro.tsx');
   const css = read('../src/app/globals.css');
-  assert.match(intro, /setTimeout\(\(\) => setOpening\(true\), 820\)/);
+  assert.match(intro, /setTimeout\(\(\) => setOpening\(true\), 160\)/);
   assert.match(intro, /Skip intro/);
   assert.match(intro, /Replay entrance/);
   assert.match(intro, /prefers-reduced-motion: reduce/);

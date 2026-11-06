@@ -1,0 +1,19 @@
+/* Shared progressive-enhancement styling for the new job comparison flows. */
+.pm-compare-filters{display:grid;grid-template-columns:1fr 1.15fr .95fr;gap:12px;align-items:end}
+.pm-job-bars{min-width:0;display:grid;gap:10px}
+.pm-job-bar-item{border:1px solid #d9e8e0;background:#f9fcfa;border-radius:13px;padding:12px;text-align:left;cursor:pointer;color:#214348;min-width:0;display:grid;gap:8px;transition:border-color .15s,transform .15s,background .15s}
+.pm-job-bar-item:hover,.pm-job-bar-item:focus-visible,.pm-job-bar-item.selected{border-color:#0b8d73;background:#eaf7f0;transform:translateY(-1px)}
+.pm-job-bar-item strong{font-size:12px;line-height:1.4}.pm-job-bar-item small{font-size:11px;line-height:1.5;color:#537a70;overflow-wrap:anywhere}
+.pm-job-bar-track{background:#dcece4;height:12px;border-radius:999px;overflow:hidden}
+.pm-job-bar-track span{display:block;height:100%;background:linear-gradient(90deg,#12a282,#0a765f);border-radius:inherit;transition:width .18s,height .18s}
+.pm-job-bars.vertical{grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;align-items:end}
+.pm-job-bars.vertical .pm-job-bar-item{min-height:210px;display:flex;flex-direction:column;justify-content:flex-end}
+.pm-job-bars.vertical .pm-job-bar-track{height:108px;display:flex;align-items:flex-end;flex:none}
+.pm-job-bars.vertical .pm-job-bar-track span{width:100%;height:0;background:linear-gradient(0deg,#0a765f,#22af87)}
+.pm-job-choice{width:100%;text-align:left;background:transparent;cursor:pointer;border:0;border-bottom:1px solid #e8efe9}
+.pm-job-choice:hover{background:#edf8f2}.pm-featured-alternative{display:flex;gap:16px;padding:19px;background:linear-gradient(125deg,#e8f7ee,#f5faf6);border:1px solid #c8e6d7;border-radius:16px}
+.pm-featured-alternative>svg{flex:none;color:#0a8167}.pm-featured-alternative .pm-button{margin-top:8px}
+.pm-evidence-item{border-left:3px solid #1c9678;padding:8px 12px;background:#f5faf7;border-radius:4px 11px 11px 4px;overflow-wrap:anywhere}
+@media(max-width:1000px){.pm-compare-filters{grid-template-columns:1fr 1fr}}
+@media(max-width:680px){.pm-compare-filters{grid-template-columns:1fr}.pm-job-bars.vertical{grid-template-columns:repeat(2,minmax(0,1fr))}.pm-featured-alternative{flex-direction:column}.pm-job-choice{gap:10px}}
+@media(prefers-reduced-motion:reduce){.pm-job-bar-item,.pm-job-bar-track span{transition:none}}

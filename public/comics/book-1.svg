@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" role="img" aria-label="ProofMatch AI Book 1: THE MATCH">
+ <defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0e4552"/><stop offset=".67" stop-color="#16a98e"/><stop offset="1" stop-color="#f5b85e"/></linearGradient>
+  <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#fff9eb"/><stop offset="1" stop-color="#eaf4ed"/></linearGradient>
+  <pattern id="dots" width="23" height="23" patternUnits="userSpaceOnUse"><circle cx="6" cy="6" r="2.4" fill="white" opacity=".24"/></pattern>
+ </defs>
+ <rect width="600" height="800" fill="url(#bg)"/>
+ <path d="M0 0 H600 V280 Q390 220 200 310 Q90 360 0 305Z" fill="#0e4552" opacity=".52"/>
+ <circle cx="540" cy="212" r="145" fill="none" stroke="white" stroke-width="32" opacity=".12"/>
+ <rect width="600" height="800" fill="url(#dots)" opacity=".6"/>
+ <path d="M0 625 Q115 590 230 624 Q360 670 600 590 V800 H0Z" fill="#0e4552" opacity=".76"/>
+ <path d="M0 699 Q120 658 260 706 Q400 737 600 686 V800 H0Z" fill="#0e4552" opacity=".68"/>
+ <text x="44" y="65" font-family="Arial,Helvetica,sans-serif" font-size="22" font-weight="800" letter-spacing="4.5" fill="white">PROOFMATCH AI</text>
+ <path d="M44 83 h132" stroke="#f5b85e" stroke-width="5" stroke-linecap="round"/>
+ <text x="44" y="153" font-family="Arial,Helvetica,sans-serif" font-size="55" font-weight="900" letter-spacing="-1.5" fill="white">THE MATCH</text>
+ <text x="44" y="222" font-family="Arial,Helvetica,sans-serif" font-size="23" fill="white" opacity=".92">Find your place</text>
+ <!-- Center illustration framed as a comic panel -->
+ <rect x="44" y="292" width="512" height="270" rx="24" fill="#102e3c" opacity=".26" transform="translate(8 11)"/>
+ <rect x="44" y="292" width="512" height="270" rx="24" fill="url(#panel)" stroke="#0e4552" stroke-width="8"/>
+ <path d="M58 497 h486 v50 H58Z" fill="#f5b85e" opacity=".27"/>
+ <g transform="translate(20 0) scale(.94 1)">
+  <!-- Stylized graphic-novel people -->
+  <g stroke="#173842" stroke-width="5" stroke-linejoin="round">
+   <path d="M84 496 Q83 413 158 400 Q237 407 239 496Z" fill="#16a98e"/>
+   <path d="M320 496 Q318 405 394 399 Q466 405 467 496Z" fill="#0e4552"/>
+   <path d="M121 389 L124 414 L190 414 L192 385" fill="#e7ad85"/>
+   <path d="M359 385 L362 416 L428 416 L431 383" fill="#f4cba0"/>
+   <ellipse cx="158" cy="344" rx="55" ry="65" fill="#e7ad85"/>
+   <ellipse cx="395" cy="339" rx="53" ry="65" fill="#f4cba0"/>
+   <path d="M103 337 Q92 273 143 270 Q206 260 211 335 Q192 311 183 300 Q150 333 103 337" fill="#173842"/>
+   <path d="M344 325 Q350 263 399 271 Q452 269 448 329 Q432 314 420 293 Q394 323 344 325" fill="#244c55"/>
+   <path d="M144 350 h7 M173 350 h7 M380 348 h7 M409 348 h7" stroke="#173842" stroke-width="5" stroke-linecap="round"/>
+   <path d="M152 378 Q160 384 170 378 M387 375 Q395 382 404 375" fill="none" stroke="#173842" stroke-width="3" stroke-linecap="round"/>
+  </g></g>
+ <path d="M233 440 Q276 405 312 439" fill="none" stroke="#0b7f73" stroke-width="12" stroke-linecap="round"/><path d="M300 419 L320 439 L301 454" fill="none" stroke="#0b7f73" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/><circle cx="273" cy="376" r="26" fill="#fff3c9" stroke="#1e5960" stroke-width="5"/><path d="M263 376 l7 7 l14 -16" fill="none" stroke="#0b927b" stroke-width="6" stroke-linecap="round"/>
+ <g fill="#f5b85e" stroke="#0e4552" stroke-width="4"><path d="M65 322 l9 -22 l9 22 l22 9 l-22 9 l-9 22 l-9 -22 l-22 -9Z"/><path d="M495 454 l6 -13 l6 13 l13 6 l-13 6 l-6 13 l-6 -13 l-13 -6Z"/></g>
+ <rect x="44" y="674" width="192" height="60" rx="30" fill="white"/>
+ <text x="71" y="713" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="900" fill="#0e4552">BOOK 01</text>
+ <text x="550" y="716" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="19" font-weight="800" letter-spacing="2" fill="white">CAREER STORIES</text>
+ </svg>

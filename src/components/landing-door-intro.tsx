@@ -26,10 +26,13 @@ export function LandingDoorIntro() {
     setPlaying(false);
     setOpening(false);
     setHasPlayed(true);
+    try { sessionStorage.setItem('proofmatch-entrance-seen', '1'); } catch {}
   }, [stopTimers]);
 
   useEffect(() => {
     if (!playing) return;
+    // Repeated visits during a live pitch should open instantly. Replay remains available.
+    try { if (sequence===0 && sessionStorage.getItem('proofmatch-entrance-seen')==='1') { dismiss(); return; } } catch {}
 
     // People who request reduced motion should reach the content immediately.
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
@@ -41,8 +44,8 @@ export function LandingDoorIntro() {
     document.body.style.overflow = 'hidden';
     skipButton.current?.focus({ preventScroll: true });
     pendingTimers.current = [
-      window.setTimeout(() => setOpening(true), 820),
-      window.setTimeout(() => dismiss(), 2700),
+      window.setTimeout(() => setOpening(true), 160),
+      window.setTimeout(() => dismiss(), 930),
     ];
     return () => {
       stopTimers();

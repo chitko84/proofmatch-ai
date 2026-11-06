@@ -15,7 +15,8 @@
     "browsercheck": "node scripts/browser-check.mjs",
     "telegram:setup": "node scripts/setup-telegram.mjs",
     "telegram:simulate": "node scripts/telegram-simulate.mjs && node --experimental-strip-types scripts/telegram-live-simulate.mjs",
-    "showcase:check": "node scripts/preflight.mjs && node scripts/audit-interactions.mjs && node --experimental-strip-types --test tests/*.test.ts && npm run telegram:simulate"
+    "showcase:check": "node scripts/preflight.mjs && node scripts/audit-interactions.mjs && node --experimental-strip-types --test tests/*.test.ts && npm run telegram:simulate",
+    "i18n:phrases": "node scripts/build-i18n-phrases.mjs"
   },
   "dependencies": {
     "next": "^15.5.0",
